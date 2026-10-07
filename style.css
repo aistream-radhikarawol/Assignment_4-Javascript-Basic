@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+
+    background: white;
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Add Task Section */
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+/* Add button */
+
+#addBtn {
+    background: #007bff;
+    color: white;
+}
+
+#addBtn:hover {
+    background: #0056b3;
+}
+
+/* Filters */
+
+.filters {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.filter {
+    background: #e9ecef;
+}
+
+.filter.active {
+    background: #007bff;
+    color: white;
+}
+
+/* Task */
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-text {
+    font-size: 16px;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Delete button */
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #a71d2a;
+}
+
+/* Empty message */
+
+#emptyMessage {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
